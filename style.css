@@ -3,16 +3,35 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.head__custom-nav .navbar-brand img {
-  width: 18px;
-  height: 18px;
+.head__custom-nav {
+  background-color: #fff;
 }
+
 .head__custom-nav .navbar-brand span {
   font-weight: 700;
-  font-size: 22px;
-  margin-left: 10px;
+  font-size: 40px;
+  margin-left: 25px;
   color: #1ea5f7;
 }
+.diffa {
+  height: 80px;
+  width: 80px;
+  -webkit-animation: rotation 8s infinite linear;
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.head__custom-nav .navbar-brand span .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
 .head__custom-nav button {
   padding: 0;
 }
@@ -88,17 +107,21 @@ body {
 }
 
 .custom-section .col-lg-8 img {
+  position: relative;
   width: 100%;
-  top: -14rem;
+  top: 3rem;
   right: -11%;
 }
 @media screen and (max-width: 991.98px) {
   .custom-section .col-lg-8 img {
     width: 100%;
-    position: ab;
-    top: 0;
+    position: relative;
+    top: 3rem;
     right: 0;
   }
+}
+.servi {
+  margin-top: 50px;
 }
 .custom-section .col-lg-8 .animate-img img {
   width: 118px;
@@ -108,11 +131,11 @@ body {
 }
 
 .container .box {
-  position:relative;
+  position: relative;
   width: 200px;
   height: 300px;
   margin: 40px;
-  background-color: #232323;
+  background-color: #ffffff;
   border-radius: 20px;
   transform-style: preserve-3d;
 }
@@ -122,22 +145,23 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 3em;
+  text-align: center;
+  font-size: 2em;
   font-weight: 900;
-  color: #fff;
+  color: rgb(17, 17, 17);
   font-style: italic;
   opacity: 0;
 }
 
 .container .box:hover::before {
-  opacity: 0.05;
+  opacity: 0.2;
 }
 .container .box .name {
   position: absolute;
   top: 0;
   left: 0;
   text-align: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
   width: 100%;
   transform-style: preserve-3d;
   transform: translate3d(0, 0, 75px);
@@ -162,7 +186,7 @@ body {
   padding: 10px 25px;
   border-radius: 30px;
   text-decoration: none;
-  font-size:x-small;
+  font-size: x-small;
   transition: 0.5s;
   opacity: 0;
   z-index: 10;
@@ -179,7 +203,7 @@ body {
   height: 175px;
   border-radius: 50%;
   transition: 0.5s;
-  background: #1ea5f7;
+  background: #ffeb36;
   z-index: 10;
   opacity: 0.5;
   transform-style: preserve-3d;
@@ -195,5 +219,4 @@ body {
   transform-style: preserve-3d;
   transform: translate3d(-50%, -50%, 100px);
   z-index: 13;
-
 }

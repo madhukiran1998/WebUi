@@ -14,46 +14,20 @@
     />
     <!-- Coustom css  -->
     <link rel="stylesheet" href="style.css" />
-
     <title>BLUE K3YS</title>
   </head>
   <body>
     <div class="container">
       <header class="head my-3">
-        <nav class="navbar navbar-expand-lg navbar-light head__custom-nav">
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <span>BLUE K3YS</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-          >
-            <span><img src="./assets/menu.png" alt="" /></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Work</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Info</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-primary" href="#">Contact us</a>
-              </li>
-            </ul>
+        <nav
+          class="navbar navbar-expand-lg navbar-light head__custom-nav fixed-top justify-content-center"
+        >
+          <div>
+            <img class="diffa" src="./assets/31.png" />
           </div>
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <span class="ml2">BLUE K3YS</span>
+          </a>
         </nav>
       </header>
     </div>
@@ -73,35 +47,36 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="box col-12 col-md-3 col-lg-4">
-          <h4 class="name">Web App Development</h4>
+    <div class="container servi">
+      <div class="row justify-content-center align-items-center">
+        <div class="box col-12 col-md-3 col-lg-3 shadow">
+          <h4 class="name">Web/App Development</h4>
           <a href="#" class="buy">Learn >></a>
-  
-          <img src="./assets/app-design.png" class="product" />
+
+          <img src="./assets/analysis.png" class="product" />
           <div class="circle"></div>
         </div>
-        <div class="box col-12 col-md-3 col-lg-4">
-          <h4 class="name">Designing solutions</h4>
+        <div class="box col-12 col-md-3 col-lg-3 shadow">
+          <h4 class="name">Designing Solutions</h4>
           <a href="#" class="buy">Learn >></a>
-          <img src="./assets/graphic-designer.png" class="product" />
+          <img src="./assets/design.png" class="product" />
           <div class="circle"></div>
         </div>
-        <div class="box col-12 col-md-3 col-lg-4">
-          <h4 class="name">ML solutions</h4>
+        <div class="box col-12 col-md-3 col-lg-3 shadow">
+          <h4 class="name">ML Solutions</h4>
           <a href="#" class="buy">Learn >></a>
-          <img src="./assets/ai.png" class="product" />
+          <img src="./assets/brain.png" class="product" />
           <div class="circle"></div>
         </div>
-        <div class="box col-12 col-md-3 col-lg-4">
-          <h4 class="name">ML solutions</h4>
+        <div class="box col-12 col-md-3 col-lg-3 shadow">
+          <h4 class="name">Training</h4>
           <a href="#" class="buy">Learn >></a>
-          <img src="./assets/ai.png" class="product" />
+          <img src="./assets/presentation.png" class="product" />
           <div class="circle"></div>
         </div>
       </div>
     </div>
+
     <script src="vanilla-tilt.min.js"></script>
     <script>
       VanillaTilt.init(document.querySelectorAll(".box"), {
@@ -124,5 +99,23 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+      var textWrapper = document.querySelector(".ml2");
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
+
+      anime.timeline({ loop: false }).add({
+        targets: ".ml2 .letter",
+        scale: [4, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: (el, i) => 70 * i,
+      });
+    </script>
   </body>
 </html>
